@@ -40,6 +40,13 @@
             display: grid;
             grid-template-columns: 160px 1fr;
         }
+        #pdfShow {
+            text-align: center;
+            height: 650px;
+            width : 1000px;
+            padding : 40px;
+            font-family: "Sans-Serif";
+        }
     </style>
     <h1>Convert PDF to Text : 원애연 졸업작품</h1>
     <div id="grid">
@@ -51,6 +58,12 @@
                 <li class="list" onclick="Clicked(this);">기능2</li></a>
             <a href="이동할페이지3.html" target="board">
                 <li class="list" onclick="Clicked(this);">기능3</li></a>
+    </div>
+    <div id="pdfShow">
+        <form action="">
+            <input type="file" name="inputFile"/>
+            <input type="submit"/>
+        </form>
     </div>
 </body>
 </html>
