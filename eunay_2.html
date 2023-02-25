@@ -82,34 +82,7 @@
                 const status = document.getElementById('status');
                 const output = document.getElementById('output');
                 if (window.FileList && window.File && window.FileReader) {
-                    document.getElementById('file_upload').addEventListener('change', event => {
-                        output.src = '';
-                        status.textContent = '';
-                        const file = event.target.files[0];
-                        if (!file.type) {status.textContent = 'Error: The File.type property does not appear to be supported on this browser.';
-                        return;
-                    }
-                    if (!file.type.match('image.*') && !file.type.match('.pdf')) {
-                        status.textContent = 'Error: The selected file does not appear to be an image or pdf.'
-                        return;
-                    }
-                    if (file.type.match('image.*')) {
-                        const reader = new FileReader();
-                        reader.addEventListener('load', event => {
-                        output.src = event.target.result;
-                        });
-                        reader.readAsDataURL(file);
-                    }
-                    if (file.type.match('application/pdf')) {
-                        const reader = new FileReader();
-                        reader.addEventListener('load', event => {
-                            <!-- output.src = event.target.result; -->
-                            pdfoutput.src = event.target.result;
-                        });
-                        reader.readAsDataURL(file);
-                    }
-
-                }); 
+                    document.getElementById('file_upload').addEventListener('change', event => {}); 
                 }
             </script>
               <p></p>
